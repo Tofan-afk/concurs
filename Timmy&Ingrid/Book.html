@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="book.css">
 </head>
+
 <body>
-    
+    <header>
+        <nav>
+            <p>+40 723 456 789</p>
+            <h1 id="title">The Winking Skeever</h1>
+
+            <ul id="nav">
+                <li><a class="active" href="main.html">Home</a></li>
+                <li><a class="active" href="Book.html">Book</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><a class="active" href="About us.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="menu">
+            <div class="Bbox">
+                <div class="box" onclick="toggleContent(1)">
+                    <img src="https://tespostcards.files.wordpress.com/2012/09/room-in-the-winking-skeever.jpg?w=1200">
+                    <h3>Bedroom 1</h3>
+                </div>
+            </div>
+            <div class="Bbox">
+                <div class="box" onclick="toggleContent(2)"><img
+                        src="https://staticdelivery.nexusmods.com/mods/1704/images/thumbnails/82417/82417-1673312116-1762170147.jpeg">
+                    <h3>Bedroom 2</h3>
+                    </p>
+                </div>
+            </div>
+            <div class="Bbox">
+                <div class="box" onclick="toggleContent(3)"><img
+                        src="https://modslab.net/files/mods/skyrim_se/GNtQ3z69TA/img1pre.jpg?">
+                    <h3>Bedroom 3</h3>
+                </div>
+            </div>
+            <div class="Bbox">
+                <div class="box" onclick="toggleContent(4)"><img
+                        src="https://winkingskeever.com/wp-content/uploads/2018/06/harbor-6-804x500.jpg">
+                    <h3>Private Suite 1</h3>
+                </div>
+            </div>
+            <div class="Bbox">
+                <div class="box" onclick="toggleContent(5)"><img
+                        src="https://64.media.tumblr.com/f27f39043ef2c3b33be3ef05db55330b/71875e3a7342ebee-10/s1280x1920/5fa60c7ba7d75b17495a0a1448ffa15bbf9899e9.png">
+                    <h3>Private Suite 2</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content" id="content1">
+            <p>Price: 700$</p>
+            <p>Offer: Only the bedroom</p>
+            <button class="hoover">Reserv now</button>
+        </div>
+        <div class="content" id="content2">
+            <p>Price: 900$</p>
+            <p>Offer: Dinner or lunch at your choice</p>
+            <button class="hoover">Reserv now</button>
+        </div>
+        <div class="content" id="content3">
+            <p>Price: 1100$</p>
+            <p>Offer: Dinner and Lunch</p>
+            <button class="hoover">Reserv now</button>
+        </div>
+        <div class="content" id="content4">
+            <p>Price: 2000$</p>
+            <p>Offer: Only the Suite</p>
+            <button class="hoover">Reserv now</button>
+        </div>
+        <div class="content" id="content5">
+            <p>Price: 2200$</p>
+            <p>Offer: Dinner and Lunch</p>
+            <button class="hoover">Reserv now</button>
+        </div>
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="hotel">The details provided on this website are for general information purposes only. While we
+            strive to keep the information accurate and up-to-date, it may change without notice. Availability of
+            services and amenities is subject to variations. Hotel policies may also change, so please confirm when
+            booking. We are not responsible for external links or third-party content. For the latest and most accurate
+            information, contact the hotel directly. Thank you for considering our hotel.</div>
+        <div class="icons">
+            <p>
+                <a href="https://www.youtube.com/watch?v=F70I07zTs6k" rel="nofollow noopener" target="_blank"
+                    title="YouTube" aria-label="YouTube">
+                    <img src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png" class="icon" alt="YouTube"
+                        loading="lazy" decoding="async" fetchpriority="low" width="40" height="35"
+                        data-purpose="content">
+                </a>
+            </p>
+        </div>
+        <p>Copyright © 2023 - 2023 TheWinkingSkeever®. <br>All rights reserved.</p>
+        <ul id="portofolio">
+            <li><a href="">Tofan Timotei</a></li>
+            <li>&</li>
+            <li><a href="">Libotean Ingrid Silvia</a></li>
+
+        </ul>
+    </footer>
 </body>
+
 </html>
