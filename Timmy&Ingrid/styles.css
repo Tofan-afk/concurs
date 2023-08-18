@@ -1,28 +1,65 @@
+@font-face {
+  font-family: 'balgrufitalic';
+  src: url('balgrufitalic-goyem-webfont.woff2') format('woff2'),
+       url('balgrufitalic-goyem-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'balgrufregular';
+  src: url('balgruf-jrye7-webfont.woff2') format('woff2'),
+       url('balgruf-jrye7-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html {
+  font-size: 17px;
+  font-family: 'balgrufregular';
+}
+
 body {
     margin: 0;
+    background-color: rgba(80, 124, 9, 0.548);
 }
 
 nav {
-    background-color: #fff;
-    color: #fff;
-    font-size: 16px;
+    background-color: rgba(110, 111, 117, 0.705);
   }
+
+p { 
+  margin:0;
+}
+
+footer {
+  text-align: center;
+}
+
+.hotel {
+  margin:0 300px;
+}
   
+.icons {
+  padding: 20px 0;
+}
+
 #nav {
-    border: solid 1px darkblue;
     list-style-type: none;
     margin: 0;
+    border-top: 2px black solid;
   }
   
 #nav > li {
     display: inline-block;
     padding-right: 10px;
-    height:auto;
-    width: auto;
+    padding: 10px 30px;
   }
 
 #nav > li :hover{
-    background-color: rgb(235, 235, 139);
+    background-color: rgb(26, 26, 25);
   }
   
   a {
@@ -56,6 +93,10 @@ nav {
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+
+.mySlides > img {
+  width:50%
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -131,3 +172,19 @@ nav {
   opacity: 1;
 }
 /*Gata*/
+#portofolio {
+  display: block;
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
+#portofolio > li {
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+#block > h2 {
+  text-align: center;
+}
