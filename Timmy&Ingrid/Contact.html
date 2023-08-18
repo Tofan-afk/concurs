@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKxhHidJ2as1mcebZm787JKdIA_rKSycU&callback=initMap&libraries=&v=weekly" defer></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <p>+40 723 456 789</p>
+            <h1 id="title">The Winking Skeever</h1>
+
+            <ul id="nav">
+                <li><a class="active" href="main.html">Home</a></li>
+                <li><a class="active" href="Book.html">Book</a></li>
+                <li><a class="active" href="Contact.html">Contact</a></li>
+                <li><a class="active" href="About_us.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <h2 id="title1">Find us here:</h2>
+            <div id="gmp-map"></div>
+            <h2 id="title2">Send us a message?</h2>
+            <form name="submit-to-google-sheet">
+                <label for="name"><h2>First name: </h2><input id="name" type="text" name="name" placeholder="John" required/></label>
+                <label for="surname"><h2>Last name: </h2><input id="surname" type="text" name="surname" placeholder="Doe" required/></label>
+                <label for="email"><h2>Email: </h2><input type="email" name="email" id="email" placeholder="john.do3@gmail.com" required/></label>
+                <label for="text"><h2>Describe your problem: </h2>
+                    <textarea resize='none' id="text" name="text" placeholder=". . ." required></textarea>
+                </label>
+                <button name="submit" id="submit">Send!</button>
+                <p id="msg"></p>
+            </form>
+        </div>
+        
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+            ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
+            <script>
+                const scriptURL = "https://script.google.com/macros/s/AKfycbyChkDoUjUhgn_z-mbvP5Uw-Krjfz8pdbUfmFDj0b7Jl8VbuTFVf7Rl3KZ1rVLpbbin/exec"
+        const form = document.forms["submit-to-google-sheet"]
+        const msg = document.getElementById("msg");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then(response => {
+              msg.innerHTML = "Thank you for your message!"
+              setTimeout(function() {
+                msg.innerHTML = ""
+              }, 1000)
+              form.reset();
+            })
+            .catch((error) => console.error("Error!", error.message));
+        });
+        // to sheet: https://docs.google.com/spreadsheets/d/1St5WaeyxcsLe1cQxmNuujQcK1Q_sIvvLyj3ocY922qw/edit#gid=0
+                "use strict";
+          
+                function initMap() {
+                  const myLatLng = {
+                    lat: 50.23052215576172,
+                    lng: -3.7809078693389893
+                  };
+                  const map = new google.maps.Map(document.getElementById("gmp-map"), {
+                    zoom: 14,
+                    center: myLatLng,
+                    fullscreenControl: false,
+                    zoomControl: true,
+                    streetViewControl: false
+                  });
+                  new google.maps.Marker({
+                    position: myLatLng,
+                    map,
+                    title: "My location"
+                  });
+                }
+              </script>
+    </main>
+    <footer>
+        <div class="hotel">The details provided on this website are for general information purposes only. While we strive to keep the information accurate and up-to-date, it may change without notice. Availability of services and amenities is subject to variations. Hotel policies may also change, so please confirm when booking. We are not responsible for external links or third-party content. For the latest and most accurate information, contact the hotel directly. Thank you for considering our hotel.</div>
+        <div class="icons">
+            <p>
+                <a href="https://www.youtube.com/watch?v=F70I07zTs6k" rel="nofollow noopener" target="_blank" title="YouTube" aria-label="YouTube">
+                    <img src="https://www.freepnglogos.com/uploads/youtube-logo-hd-8.png" class="icon" alt="YouTube" loading="lazy" decoding="async" fetchpriority="low" width="40" height="35" data-purpose="content">
+                </a>
+            </p>
+        </div>
+            <p>Copyright © 2023 - 2023 TheWinkingSkeever®. <br>All rights reserved.</p>
+            <ul id="portofolio">
+                <li><a href="Timmy&Ingrid\Tofan_Timotei\index.html">Tofan Timotei</a></li>
+                <li>&</li>
+                <li><a href="Timmy&Ingrid\Libotean Ingrid\index.html">Libotean Ingrid Silvia</a></li>
     
+            </ul>
+    </footer>
 </body>
 </html>
+

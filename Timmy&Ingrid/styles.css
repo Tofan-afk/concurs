@@ -91,7 +91,19 @@ nav > p {
   margin:0;
 }
 
+#page {
+  padding: 20px;
+}
 
+#page > h2 {
+  display: block;
+  margin-top: 20px;
+}
+
+#page > p {
+  margin: 10px 100px;
+  font-size: 1.7rem;
+}
 
 /*Photo gallery*/
 * {
