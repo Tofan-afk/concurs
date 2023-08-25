@@ -45,3 +45,10 @@
   text-decoration: none;
 }
 
+.content {
+    display: none;
+}
+
+.box {
+    border:none;
+}

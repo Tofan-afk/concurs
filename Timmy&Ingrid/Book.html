@@ -28,35 +28,35 @@
 
         <div id="menu">
             <div class="Bbox">
-                <div class="box" onclick="toggleContent(1)">
+                <button class="box" onclick="toggleContent(1)">
                     <img src="https://tespostcards.files.wordpress.com/2012/09/room-in-the-winking-skeever.jpg?w=1200">
                     <h3>Bedroom 1</h3>
-                </div>
+                </button>
             </div>
             <div class="Bbox">
-                <div class="box" onclick="toggleContent(2)"><img
+                <button class="box" onclick="toggleContent(2)"><img
                         src="https://staticdelivery.nexusmods.com/mods/1704/images/thumbnails/82417/82417-1673312116-1762170147.jpeg">
                     <h3>Bedroom 2</h3>
                     </p>
-                </div>
+                </button>
             </div>
             <div class="Bbox">
-                <div class="box" onclick="toggleContent(3)"><img
+                <button class="box" onclick="toggleContent(3)"><img
                         src="https://modslab.net/files/mods/skyrim_se/GNtQ3z69TA/img1pre.jpg?">
                     <h3>Bedroom 3</h3>
-                </div>
+                </button>
             </div>
             <div class="Bbox">
-                <div class="box" onclick="toggleContent(4)"><img
+                <button class="box" onclick="toggleContent(4)"><img
                         src="https://winkingskeever.com/wp-content/uploads/2018/06/harbor-6-804x500.jpg">
                     <h3>Private Suite 1</h3>
-                </div>
+                </button>
             </div>
             <div class="Bbox">
-                <div class="box" onclick="toggleContent(5)"><img
+                <button class="box" onclick="toggleContent(5)"><img
                         src="https://64.media.tumblr.com/f27f39043ef2c3b33be3ef05db55330b/71875e3a7342ebee-10/s1280x1920/5fa60c7ba7d75b17495a0a1448ffa15bbf9899e9.png">
                     <h3>Private Suite 2</h3>
-                </div>
+                </button>
             </div>
         </div>
 
@@ -87,12 +87,11 @@
             <button class="hoover">Reserv now</button>
         </div>
 
-
-
-
-
-
-
+        <script>
+            function toggleContent(z) {
+                document.getElementById('content'+z).style.display="block";
+            }
+        </script>
     </main>
 
     <footer>
